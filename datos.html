@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Curiosos | Para Ti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="datos-page">
+
+    <nav class="menu-container">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">❤️</label>
+    <ul class="menu-links">
+        <li><a href="index.html">Inicio</a></li> 
+        <li><a href="amor.html">Mi Amor</a></li>
+        <li><a href="momentos.html">Momentos</a></li>
+        <li><a href="recuerdos.html">Recuerdos</a></li>
+        <li><a href="canciones.html">Canciones</a></li>
+        <li><a href="pasado.html">Pasado</a></li>
+        <li><a href="futuro.html">Futuro</a></li>
+    </ul>
+</nav>
+
+    <section class="datos-hero">
+        <h1>Cosas que quizás no sabías...</h1>
+        <p>Haz clic en cada punto para descubrir más</p>
+    </section>
+
+    <div class="puntos-container">
+        <div class="dato-punto" onclick="openModal('modal1')">
+            <span class="icono">📍</span>
+            <p>Su lugar favorito</p>
+        </div>
+
+        <div class="dato-punto" onclick="openModal('modal2')">
+            <span class="icono">🍕</span>
+            <p>Su comida favorita</p>
+        </div>
+
+        <div class="dato-punto" onclick="openModal('modal3')">
+            <span class="icono">🎵</span>
+            <p>Su canción favorita</p>
+        </div>
+        <div class="dato-punto" onclick="openModal('modal4')">
+            <span class="icono">🎮</span>
+            <p>Su mayor hobby</p>
+        </div>
+        <div class="dato-punto" onclick="openModal('modal5')">
+            <span class="icono">🚩</span>
+            <p>Su mayor "red flag"</p>
+        </div>
+        <div class="dato-punto" onclick="openModal('modal6')">
+            <span class="icono">🦸</span>
+            <p>Su superpoder oculto</p>
+        </div>
+        <div class="dato-punto" onclick="openModal('modal7')">
+            <span class="icono">🎬</span>
+            <p>Su pelicula favorita</p>
+        </div>
+        <div class="dato-punto" onclick="openModal('modal8')">
+            <span class="icono">🧸</span>
+            <p>Su lado "soft"</p>
+        </div>
+        <div class="dato-punto" onclick="openModal('modal9')">
+            <span class="icono">🧠</span>
+            <p>El dato más aleatorio que se</p>
+        </div>
+        <div class="dato-punto" onclick="openModal('moda20')">
+            <span class="icono">🫂</span>
+            <p>Su lenguaje del amor</p>
+        </div>
+        <div class="dato-punto" onclick="openModal('moda21')">
+            <span class="icono">🗣️</span>
+            <p>Su frase típica</p>
+        </div>
+        <div class="dato-punto" onclick="openModal('moda22')">
+            <span class="icono">🕰️</span>
+            <p>Mi primera impresión</p>
+        </div>
+
+        
+    </div>
+    
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Su lugar en el mundo</h2>
+            <p>Obviamente tu lugar favorito en este mundo, son...MIS CHICHIS. JAJAJAJA NTC obviamente tu cuarto mi vida hermosa.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>La comida que comeria todos los dias</h2>
+            <p>Sabias que tu comida fav es arroz con milanesa</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>Su cancion favorita</h2>
+            <p>Obviamente piratas sin barco. https://youtu.be/Mg5DdgsDk3w?si=oAAgMtJhAi3HbiAJ</p>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>Su Hooby</h2>
+            <p>Dibujar y el free.</p>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <h2>Red Flag</h2>
+            <p>Que no me dice diario que me ama. y ni me dice que soy lo mejor de su vida.</p>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal6')">&times;</span>
+            <h2>Heroe Hugo</h2>
+            <p>Tienes ese superpoder de hacerme enojar y desenojar tan facil amor.</p>
+        </div>
+    </div>
+
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal7')">&times;</span>
+            <h2>Su peli favorita</h2>
+            <p>La pelicula de huevos (Toda la saga).</p>
+        </div>
+    </div>
+
+    <div id="modal8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal8')">&times;</span>
+            <h2>Tierno mi amor</h2>
+            <p>Sabias que cuando eres tierno me das muchos besos, y me abrasas siempre. (No lo haces ya )=)</p>
+        </div>
+    </div>
+
+    <div id="modal9" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal9')">&times;</span>
+            <h2>Ojito</h2>
+            <p>R.I.P. Tu dientito, cuando te lo quite de un chingadazo</p>
+        </div>
+    </div>
+
+    <div id="moda20" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('moda20')">&times;</span>
+            <h2>Tu lenguaje de amor</h2>
+            <p>Obviamente el contacto fisico.</p>
+        </div>
+    </div>
+
+    <div id="moda21" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('moda21')">&times;</span>
+            <h2>Tu frase TIPICA</h2>
+            <p>We jajaja, ntc. Amor y tengo ganas.</p>
+        </div>
+    </div>
+
+    <div id="moda22" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('moda22')">&times;</span>
+            <h2>Mi primera imprecion de ti</h2>
+            <p>Sinceramente ya te la he dicho pero aqui vamos de nuevo, mi primera imprecion de ti fue que eras un mujeriego y me cagabas el como eras, pero despues te conoci y supe que era verdad, jajaja ntc,ya. Te conoci y supe que eras el amor de mi vida corazon, no sabes la idea de cuanto te amo</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

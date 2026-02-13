@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Recuerdos | Para Ti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="recuerdos-page">
+
+    <nav class="menu-container">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">❤️</label>
+        <ul class="menu-links">
+             <li><a href="index.html">Inicio</a></li> 
+        <li><a href="amor.html">Mi Amor</a></li>
+        <li><a href="momentos.html">Momentos</a></li>
+        <li><a href="datos.html">Datos</a></li>
+        <li><a href="canciones.html">Canciones</a></li>
+        <li><a href="pasado.html">Pasado</a></li>
+        <li><a href="futuro.html">Futuro</a></li>
+        </ul>
+    </nav>
+
+    <div class="recuerdos-header">
+        <h1>Nuestros Recuerdos Aleatorios</h1>
+        <p>Toca la pantalla para descubrir un nuevo momento</p>
+    </div>
+
+    <div id="collage-container" class="collage-container" onclick="showRandomMemory()">
+        <div class="initial-message">Toca aquí para ver nuestro primer recuerdo</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
