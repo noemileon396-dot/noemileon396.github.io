@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Futuro | Para Ti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="futuro-page">
+
+    <nav class="menu-container">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">❤️</label>
+        <ul class="menu-links">
+            <li><a href="index.html">Inicio</a></li> 
+        <li><a href="amor.html">Mi Amor</a></li>
+        <li><a href="momentos.html">Momentos</a></li>
+        <li><a href="recuerdos.html">Recuerdos</a></li>
+        <li><a href="datos.html">Datos</a></li>
+        <li><a href="canciones.html">Canciones</a></li>
+        <li><a href="pasado.html">Pasado</a></li>
+    </ul>
+</nav>
+    <div class="futuro-header">
+        <h1>Nuestros Próximos Pasos</h1>
+        <p>Haz clic en cada momento de la línea</p>
+    </div>
+
+    <div class="timeline-wrapper">
+        <div class="timeline-line"></div>
+        <div class="timeline-dots">
+            <div class="dot" onclick="showFuture(1)"><span>1</span></div>
+            <div class="dot" onclick="showFuture(2)"><span>2</span></div>
+            <div class="dot" onclick="showFuture(3)"><span>3</span></div>
+            <div class="dot" onclick="showFuture(4)"><span>4</span></div>
+        </div>
+    </div>
+
+    <div id="future-display" class="future-card-container">
+        <div class="instruction-text">Selecciona un punto para ver un sueño...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

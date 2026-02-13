@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Canciones | Para Ti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="spotify-theme">
+
+    <nav class="menu-container">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">❤️</label>
+        <ul class="menu-links">
+           <li><a href="index.html">Inicio</a></li> 
+        <li><a href="amor.html">Mi Amor</a></li>
+        <li><a href="momentos.html">Momentos</a></li>
+        <li><a href="recuerdos.html">Recuerdos</a></li>
+        <li><a href="datos.html">Datos</a></li>
+        <li><a href="pasado.html">Pasado</a></li>
+        <li><a href="futuro.html">Futuro</a></li>
+    </ul>
+</nav>
+
+    <div class="spotify-header">
+        <h1>Tu Playlist Personal</h1>
+        <p> 2 clics: Escuchar en Spotify</p>
+    </div>
+
+    <div class="playlist-container">
+       <div class="track-card" 
+     onclick="showInfo(this)" 
+     ondblclick="goToSpotify('https://open.spotify.com/intl-es/track/2kFHjWko1il6O9L3eK9IzG?si=e0fb178101be41c3')">
+            <img src="img/beginning.jpg" alt="Portada">
+            <div class="track-info">
+                <h3>beginning middle end</h3>
+                <p>LEAH NOBEL</p>
+                <div class="porque-es-importante">
+                    "Nuestra Cancion"
+                </div>
+            </div>
+        </div>
+
+        <div class="track-card" 
+     onclick="showInfo(this)" 
+     ondblclick="goToSpotify('https://open.spotify.com/intl-es/track/5I0aHj2JSQpoxSQnh3XcjO?si=7dda71070a3f4d01')">
+            <img src="img/teamoymas.jpg" alt="Portada">
+            <div class="track-info">
+                <h3>Te amo y más</h3>
+                <p>Gustabo Santaolalla</p>
+                <div class="porque-es-importante">
+                    "Nuestra Cancion"
+                </div>
+            </div>
+        </div>
+
+        <div class="track-card" 
+     onclick="showInfo(this)" 
+     ondblclick="goToSpotify('https://open.spotify.com/intl-es/track/0v9UztY5A12cJUsWD7PZzS?si=a68aacb0c6cf4df8')">
+            <img src="img/amordecine.jpg" alt="Portada">
+            <div class="track-info">
+                <h3>Amor de Cine</h3>
+                <p>Humbe</p>
+                <div class="porque-es-importante">
+                    "Nuestra Cancion"
+                </div>
+            </div>
+        </div>
+
+        <div class="track-card" 
+     onclick="showInfo(this)" 
+     ondblclick="goToSpotify('https://open.spotify.com/intl-es/track/3V1jBnDI3zCn25ONFiqwN8?si=1e62863aa21c4ce9')">
+            <img src="img/ojitosdemiel.jpg" alt="Portada">
+            <div class="track-info">
+                <h3>Ojitos de Miel</h3>
+                <p>T3r Elemento</p>
+                <div class="porque-es-importante">
+                    "Nuestra Cancion"
+                </div>
+            </div>
+        </div>
+
+        <div class="track-card" 
+             onclick="showInfo(this)" 
+             ondblclick="goToSpotify('https://open.spotify.com/intl-es/track/3FcZPkGjG64z5cJYXPlUHC?si=154af2db54d048f0)">
+            <img src="img/brillas.jpg" alt="Portada">
+            <div class="track-info">
+                <h3>Musica Romantica</h3>
+                <p>Pancho Barraza, Grupo Firme</p>
+                <div class="porque-es-importante">
+                    "Es especial porque siempre la cantamos en el coche."
+                </div>
+            </div>
+        </div>
+        <div class="track-card" 
+     onclick="showInfo(this)"
+     ondblclick="goToSpotify('https://open.spotify.com/intl-es/track/2k4MjD7I4ddpwwZKxHrONk?si=bc2c5f98315c4a19')">
+            <img src="img/confieso.jpg" alt="Portada">
+            <div class="track-info">
+                <h3>Confieso</h3>
+                <p>Humbe</p>
+                <div class="porque-es-importante">
+                    "Nuestra Cancion"
+                </div>
+            </div>
+        </div>
+
+        <div class="track-card" 
+     onclick="showInfo(this)" 
+     ondblclick="goToSpotify('https://open.spotify.com/intl-es/track/4DhTBCvoemYivBVHkk7RKI?si=8986742513024157')">
+            <img src="img/cafune.jpg" alt="Portada">
+            <div class="track-info">
+                <h3>Cafune</h3>
+                <p>Micro TDH</p>
+                <div class="porque-es-importante">
+                    "Nuestra Cancion"
+                </div>
+            </div>
+        </div>
+
+        <div class="track-card" 
+     onclick="showInfo(this)" 
+     ondblclick="goToSpotify('https://open.spotify.com/intl-es/track/3EK4tGkSiO5xvvB5sM4tln?si=82d920aa1bfc4da3')">
+            <img src="img/amarrame.jpg" alt="Portada">
+            <div class="track-info">
+                <h3>Amarrame</h3>
+                <p>Mon Laferte</p>
+                <div class="porque-es-importante">
+                    "Nuestra Cancion"
+                </div>
+            </div>
+        </div>
+
+        <div class="track-card" 
+     onclick="showInfo(this)" 
+     ondblclick="goToSpotify('https://open.spotify.com/intl-es/track/0bK3jxkbq5cDKWr68KtO8G?si=4fcb58e9004b42d8')">
+            <img src="img/unayotraves.jpg" alt="Portada">
+            <div class="track-info">
+                <h3>Una y otra vez</h3>
+                <p>Manuel Medrano</p>
+                <div class="porque-es-importante">
+                    "Nuestra Cancion"
+                </div>
+            </div>
+        </div>
+
+        <div class="track-card" 
+     onclick="showInfo(this)" 
+     ondblclick="goToSpotify('https://open.spotify.com/intl-es/track/1twNNAu8WVqJuTKgoHrHws?si=02e43060206b4e90')">
+            <img src="img/deunoytodoslosmodos.jpg" alt="Portada">
+            <div class="track-info">
+                <h3>De uno y de todos los modos</h3>
+                <p>Palomo</p>
+                <div class="porque-es-importante">
+                    "Nuestra Cancion"
+                </div>
+            </div>
+        </div>
+
+        <div class="track-card" 
+     onclick="showInfo(this)" 
+     ondblclick="goToSpotify('https://open.spotify.com/intl-es/track/6IL4kE0WnD4CfKp2me7vCa?si=c8f106d11d32439e')">
+            <img src="img/cuantotequiero.jpg" alt="Portada">
+            <div class="track-info">
+                <h3>Te amo (para siempre)</h3>
+                <p>Intocable</p>
+                <div class="porque-es-importante">
+                    "Nuestra Cancion"
+                </div>
+            </div>
+        </div>
+
+        <div class="track-card" 
+     onclick="showInfo(this)" 
+     ondblclick="goToSpotify('https://open.spotify.com/intl-es/track/6Yc3tjFCVR2bfAQFRTZBef?si=db85413ba504404b')">
+            <img src="img/home.jpg" alt="Portada">
+            <div class="track-info">
+                <h3>Home</h3>
+                <p>BTS</p>
+                <div class="porque-es-importante">
+                    "Nuestra Cancion"
+                </div>
+            </div>
+        </div>
+
+        <div class="track-card" 
+     onclick="showInfo(this)" 
+     ondblclick="goToSpotify('https://open.spotify.com/intl-es/track/7kWFRZdedr2gtfE8JDumVZ?si=fbf8cb5e02624f70')">
+            <img src="img/ropadebazar.jpg" alt="Portada">
+            <div class="track-info">
+                <h3>Ropa de bazar</h3>
+                <p>Ed Maverick, Bratty</p>
+                <div class="porque-es-importante">
+                    "Nuestra Cancion"
+                </div>
+            </div>
+        </div>
+
+        <div class="track-card" 
+     onclick="showInfo(this)" 
+     ondblclick="goToSpotify('https://open.spotify.com/intl-es/track/4Xly6Wx7KtcJc739Y4myOt?si=e7762ff8f37f4fba')">
+            <img src="img/mimorenita.jpg" alt="Portada">
+            <div class="track-info">
+                <h3>Mi morenita</h3>
+                <p>Grupo Marca Registrada</p>
+                <div class="porque-es-importante">
+                    "Nuestra Cancion"
+                </div>
+            </div>
+        </div>
+
+        <div class="track-card" 
+     onclick="showInfo(this)" 
+     ondblclick="goToSpotify('https://open.spotify.com/intl-es/track/60fniRXixufxR4HCYjOyp6?si=aaf60caca3ef4315')">
+            <img src="img/vuelve.jpg" alt="Portada">
+            <div class="track-info">
+                <h3>Vuelve</h3>
+                <p>Ivan Cornejo</p>
+                <div class="porque-es-importante">
+                    "Nuestra Cancion"
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

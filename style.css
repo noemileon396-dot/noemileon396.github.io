@@ -1,0 +1,927 @@
+/* 1. Quitamos los márgenes de TODO el documento para eliminar la línea blanca */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Ajustamos el contenedor del menú */
+.menu-container {
+    position: absolute; /* Cambiado de fixed a absolute para que viva 'dentro' de la foto */
+    top: 20px;
+    right: 20px; /* Movido a la derecha */
+    left: auto;  /* Quitamos la posición izquierda */
+    z-index: 1000;
+}
+
+/* 3. Estilo del corazón */
+.menu-icon {
+    font-size: 30px; /* Tamaño del corazón */
+    cursor: pointer;
+    user-select: none;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.5)); /* Sombra para que se vea sobre la foto */
+}
+
+/* 4. Ajuste para que la lista salga hacia la izquierda cuando se abra */
+.menu-links {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95); /* Blanco un poco más sólido */
+    list-style: none;
+    padding: 15px;
+    border-radius: 15px;
+    display: none;
+    min-width: 180px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    border: 1px solid #eee; /* Un pequeño borde para que resalte */
+}
+
+/* ESTILO DE LOS ENLACES (Las palabras) */
+.menu-links li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    
+    /* 1. Color Negro por defecto */
+    color: #000000; 
+    
+    /* 2. Tipografía tipo "Comic" */
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-weight: bold;
+    font-size: 1.1rem;
+    
+    transition: all 0.3s ease; /* Para que el cambio de color sea suave */
+}
+
+/* 3. CAMBIO A ROJO AL PASAR EL MOUSE (HOVER) */
+.menu-links li a:hover {
+    color: #ff0000; /* Rojo brillante */
+    transform: translateX(-5px); /* Un pequeño movimiento a la izquierda para que se vea interactivo */
+}
+
+#menu-toggle:checked ~ .menu-links {
+    display: block;
+}
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+/* Fondo de la sección principal con SU foto */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+              url('img/Foto (1).JPG') no-repeat center 40%/cover;
+    color: white;
+}
+
+/* Efecto de fotos dentro de la palabra LOVE */
+.love-container {
+    display: flex;
+    gap: 20px; /* Espacio entre las letras */
+    justify-content: center;
+    align-items: center;
+}
+
+.letter {
+    font-size: 15vw; /* Tamaño muy grande */
+    font-weight: 900;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.5));
+    background-size: cover;
+    background-position: center;
+}
+
+/* Foto para la L */
+.l { 
+    background-image: url('img/Foto (95).jpg'); 
+    /* El primer valor (20%) mueve de izquierda a derecha */
+    /* El segundo valor (50%) mueve de arriba a abajo */
+    background-position: 180% 10%; 
+}
+
+/* Foto para la O */
+.o { 
+    background-image: url('img/Foto (149).jpg'); 
+    background-position: 10% 50%; /* 80% mueve la foto hacia la izquierda para ver el lado derecho */
+}
+
+/* Foto para la V */
+.v { 
+    background-image: url('img/Foto (162).jpg'); 
+    background-position: 50% 50%; 
+}
+
+/* Foto para la E */
+.e { 
+    background-image: url('img/Foto (31).jpeg'); 
+    background-position: 100% 20%; 
+}sition: center 50%; 
+
+/* Menú Desplegable Simple */
+.menu-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+#menu-toggle { display: none; }
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.menu-links {
+    display: none;
+    list-style: none;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#menu-toggle:checked ~ .menu-links {
+    display: block;
+}
+
+/* Animación de la Historia al bajar */
+/* Contenedor de la historia */
+.history-content {
+    display: flex;
+    flex-direction: column; /* Texto arriba, foto abajo */
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.history-item {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente todo el contenido */
+    margin-bottom: 50px;     /* Espacio entre cada recuerdo */
+}
+
+.history-text p {
+    font-family: 'Comic Sans MS', cursive; /* O la que prefieras */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4a4a4a;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* MARCO ROMÁNTICO / AESTHETIC */
+.aesthetic-frame {
+    position: relative;
+    padding: 10px;
+    background: white;
+    border-radius: 20px;
+    /* Sombra suave color rosa/rojizo */
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.5); 
+    transition: transform 0.4s ease;
+}
+
+.aesthetic-frame img {
+    width: 100%;
+    max-width: 400px;
+    height: 300px; /* Tamaño estático */
+    object-fit: cover; /* Para que no se deforme */
+    object-position: center 20%; /* Para que muevas la foto de arriba a abajo */
+    border-radius: 15px; /* Bordes internos redondeados */
+    display: block;
+    /* Filtro sutil para que se vea más cálida */
+    filter: saturate(1.1) brightness(1.05) sepia(0.1);
+}
+
+/* Efecto al pasar el mouse */
+.aesthetic-frame:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 35px rgba(255, 77, 109, 0.4);
+}
+
+/* Adorno de corazón opcional sobre la foto */
+.aesthetic-frame::after {
+    content: "❤️";
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    font-size: 25px;
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.2));
+}
+/* Estilo para el título principal de la sección */
+.history-section h2 {
+    text-align: center;      /* Centra el texto */
+    font-family: 'Comic Sans MS', cursive; /* Tipografía tierna */
+    color: #ff4d6d;          /* Color rosa/rojo romántico */
+    font-size: 2.5rem;       /* Tamaño grande y legible */
+    margin-bottom: 50px;     /* Espacio antes de que empiece la historia */
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+/* Opcional: Una línea decorativa debajo del título */
+.history-section h2::after {
+    content: "";
+    display: block;
+    width: 100px;            /* Ancho de la línea */
+    height: 3px;             /* Grosor de la línea */
+    background: #ff4d6d;     /* Color de la línea */
+    margin: 10px auto 0;     /* La centra y le da espacio arriba */
+    border-radius: 2px;
+    opacity: 0.5;            /* La hace un poco transparente para que sea sutil */
+}
+/* --- ESTILOS PÁGINA AMOR --- */
+
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    text-decoration: none;
+    background: white;
+    color: #ff4d6d;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.historia-hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.historia-container {
+    padding: 100px 10%;
+    background: #fff;
+}
+
+.historia-bloque {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 120px;
+    opacity: 0; /* Para el efecto de aparecer al bajar */
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.historia-bloque.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.historia-bloque.reverse {
+    flex-direction: row-reverse;
+}
+
+.historia-foto img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.historia-texto h2 {
+    color: #ff4d6d;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+/* --- ESENCIA URBANA ROMÁNTICA --- */
+
+.urban-style {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.historia-bloque {
+    display: flex;
+    align-items: center; /* Centra verticalmente el texto con la foto */
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 120px;
+    flex-wrap: wrap; /* Para que en móviles se ponga uno abajo del otro */
+}
+
+/* LA MAGIA DEL ZIGZAG: Invierte el orden en el segundo bloque */
+.historia-bloque.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Estilo de Texto Urbano */
+.historia-texto {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.historia-texto h2 {
+    font-family: 'Impact', 'Arial Black', sans-serif; /* Fuente más fuerte/urbana */
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    color: #333;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+    text-align: left; /* Alineado al lado de la foto */
+}
+
+.historia-bloque.reverse .historia-texto h2 {
+    text-align: right; /* Alineado a la derecha cuando la foto está a la izquierda */
+}
+
+.historia-texto p {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Marco Estilo Urbano (Más rudo pero con amor) */
+.urban-frame {
+    flex: 1;
+    max-width: 450px;
+    background: #333; /* Fondo oscuro tipo asfalto */
+    padding: 10px;
+    border-radius: 0px; /* Bordes rectos para look urbano */
+    transform: rotate(2deg); /* Un poco chueco tipo sticker */
+    box-shadow: 15px 15px 0px #ff4d6d; /* Sombra sólida rosa, muy "pop-art" */
+}
+
+.historia-bloque.reverse .urban-frame {
+    transform: rotate(-2deg); /* Inclinación opuesta */
+    box-shadow: -15px 15px 0px #ff4d6d; /* Sombra hacia el otro lado */
+}
+
+.urban-frame img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+    filter: contrast(1.1); /* Más fuerza visual */
+}
+/* Estilo de los puntos */
+.puntos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+/* Centrar el título y subtítulo de la página de Datos */
+.datos-header, 
+header.presente-header, /* Por si usaste la misma clase que en presente */
+header {
+    text-align: center;
+    width: 100%;
+    padding: 100px 20px 40px; /* Ajusta el padding según necesites */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Aplicar el fondo difuminado a la página de Datos */
+.datos-page {
+    /* Crea un degradado que empieza en rosa claro y termina en blanco */
+    background: linear-gradient(135deg, #fff0f3 0%, #ffffff 100%);
+    background-attachment: fixed; /* Mantiene el fondo quieto al hacer scroll */
+    min-height: 100vh; /* Asegura que cubra toda la pantalla */
+}
+
+h1, p {
+    text-align: center;
+}
+.dato-punto {
+    background: #ffffff;
+    border: 1px solid rgba(255, 77, 109, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+    width: 150px;
+}
+
+.dato-punto:hover { transform: scale(1.1); }
+
+/* Estilo de la Ventanita (Modal) */
+.modal {
+    display: none; /* Escondida por defecto */
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    animation: aparecer 0.4s;
+}
+
+@keyframes aparecer {
+    from {transform: translateY(-50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.close {
+    position: absolute;
+    right: 20px; top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ff4d6d;
+}
+/* --- ESTILO SPOTIFY --- */
+.spotify-theme {
+    background-color: #121212; /* Negro Spotify */
+    color: white;
+}
+
+.spotify-header {
+    padding: 60px 20px 20px;
+    text-align: center;
+    background: linear-gradient(#1db95433, #121212);
+}
+
+.spotify-header h1 { color: #1DB954; font-size: 2.5rem; }
+
+.playlist-container {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.track-card {
+    background: #181818;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.track-card:hover { background: #282828; }
+
+.track-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+}
+
+.track-info h3 { font-size: 1rem; margin-bottom: 5px; }
+.track-info p { color: #b3b3b3; font-size: 0.9rem; }
+
+/* El texto que sale al dar 1 clic */
+.porque-es-importante {
+    display: none;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #1DB954;
+    font-style: italic;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+
+/* --- PÁGINA FUTURO: NOCHE ESTRELLADA --- */
+.futuro-page {
+    background: linear-gradient(180deg, #050a18 0%, #0c1427 100%);
+    color: white;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Título con resplandor suave */
+.futuro-header h1 {
+    font-family: 'Comic Sans MS', cursive;
+    color: #fff;
+    text-align: center;
+    padding-top: 40px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.futuro-header p {
+    text-align: center;
+    color: #ffd700;
+    font-family: 'Comic Sans MS', cursive;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+/* --- LÍNEA DE TIEMPO INTERACTIVA --- */
+.timeline-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 80px auto; 
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* La línea amarilla del medio */
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.timeline-dots {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Los Círculos Amarillos Brillantes */
+.dot {
+    width: 55px;
+    height: 55px;
+    background: #ffd700;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Resplandor estelar intenso */
+    box-shadow: 0 0 15px #ffd700, 0 0 30px rgba(255, 215, 0, 0.6);
+}
+
+.dot span {
+    font-size: 1.3rem;
+    font-family: 'Impact', sans-serif;
+}
+
+/* Efecto al seleccionar o pasar el mouse */
+.dot:hover, .dot.active {
+    transform: scale(1.3);
+    background: #ffffff;
+    box-shadow: 0 0 25px #ffffff, 0 0 50px #ffd700;
+    border-color: #ffd700;
+}
+
+/* La tarjeta que aparece (Futuro) */
+.future-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 25px;
+    color: #000;
+    max-width: 500px;
+    margin: 40px auto;
+    border: 3px solid #000;
+    box-shadow: 12px 12px 0px #ffd700; 
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.future-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #000;
+}
+
+.future-card h3 {
+    font-family: 'Impact', sans-serif;
+    color: #000;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.instruction-text {
+    text-align: center;      /* Lo centra horizontalmente */
+    color: #ffd700;          /* Color amarillo estrella */
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 1.4rem;       /* Un poco más grande para que se vea claro */
+    font-style: italic;
+    margin-top: 20px;
+    
+    /* El toque brillante: resplandor de estrella */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 
+                 0 0 20px rgba(255, 215, 0, 0.4);
+    
+    /* Animación suave para que parezca que titila como una estrella */
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+/* Animación de titileo */
+@keyframes twinkle {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+/* --- ESTILOS PÁGINA MOMENTOS --- */
+.momentos-page {
+    background-color: #1a1a1a; /* Fondo oscuro para que resalten los videos */
+    color: white;
+}
+
+.momentos-header {
+    padding: 100px 20px 40px;
+    text-align: center;
+}
+.momentos-header h1 {
+    color: #ff4d6d;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para que se vea más 3D */
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.momentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 10%;
+}
+
+.momento-card {
+    background: #2a2a2a;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.momento-card:hover {
+    transform: translateY(-50px);
+}
+
+.video-wrapper video {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    background: black;
+}
+
+.momento-info {
+    padding: 20px;
+}
+
+.momento-info h3 {
+    color: #ff4d6d;
+    font-family: 'Comic Sans MS', cursive;
+    margin-bottom: 10px;
+}
+
+.momento-info p {
+    font-size: 0.95rem;
+    font-family: 'Comic Sans MS', cursive;
+    color: #ccc;
+    line-height: 1.4;
+}
+/* --- ESTILOS PÁGINA RECUERDOS --- */
+.recuerdos-page { 
+    background-color: #f7e6ec; 
+    overflow-y: scroll !important; /* Fuerza la aparición de la barra de scroll */
+    min-height: 101vh; /* Un poquito más de la pantalla para obligar al scroll */
+}
+
+/* 1. Fondo de TODA la página */
+.recuerdos-page { 
+    background: linear-gradient(135deg, #a2d2ff 0%, #fefae0 100%) !important;
+    background-attachment: fixed; 
+    overflow-y: scroll !important; 
+    min-height: 101vh;
+}
+
+/* 2. Estilo del Título (Header) */
+.recuerdos-page .recuerdos-header {
+    background: rgba(255, 255, 255, 0.3); /* Un toque blanco transparente */
+    backdrop-filter: blur(5px); /* Efecto de cristal para que se vea moderno */
+    padding: 60px 20px 30px;
+    text-align: center;
+    position: relative; 
+    z-index: 10;
+    width: 100%;
+}
+
+.collage-container {
+    position: relative; /* CAMBIO CLAVE: permite que la foto se mueva al bajar */
+    width: 100vw;
+    min-height: 800px; /* Le damos mucha altura para que puedas bajar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px; 
+    cursor: pointer;
+    z-index: 1;
+}
+
+.initial-message {
+    font-size: 1.8rem;
+    color: #2563be;
+    font-weight: bold;
+    text-align: center;
+    z-index: 5;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.memory-item {
+    position: absolute;
+    top: 50px; 
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 300px;
+    height: 380px;
+    background-color: white;
+    /* Padding: Arriba 15px, Lados 15px, Abajo 40px (barra blanca chica) */
+    padding: 15px 15px 40px 15px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    
+    /* Configuración para que la FOTO ocupe el espacio superior */
+    background-size: cover;
+    background-position: center;
+    background-clip: content-box; /* Clave para que la foto no tape el marco blanco */
+    
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.memory-item.active {
+    opacity: 1;
+}
+
+.memory-info {
+    position: absolute;
+    bottom: 8px; /* Lo mueve al centro de la barrita blanca de abajo */
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    
+    
+    /* Estilo limpio: sin cuadros negros, solo la letra */
+    background: transparent; 
+    border: none;
+    box-shadow: none;
+    color: #333; 
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 0.9rem;
+    padding: 0 10px;
+}
+
+.memory-item.active .memory-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Ocultar el header si el collage está activo */
+.recuerdos-page .recuerdos-header {
+    z-index: 3; /* Asegura que el header esté por encima de las imágenes de fondo */
+    position: relative;
+    background: rgba(255,255,255,0.7); /* Fondo semi-transparente para el texto */
+    padding-top: calc(60px + env(safe-area-inset-top)); /* Ajuste para móviles */
+    padding-bottom: 20px;
+}
+
+/* Hacer el menu-container fijo en esta pagina también si no lo está globalmente */
+.menu-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+/* --- ESTILOS PÁGINA PASADO --- */
+/* --- ESTILOS PÁGINA PASADO (SCRAPBOOK) --- */
+.pasado-page {
+    background-color: #e5dada; 
+    background-image: radial-gradient(#d1c1c1 1px, transparent 1px);
+    background-size: 20px 20px;
+    min-height: 100vh;
+}
+
+.pasado-header {
+    padding: 100px 20px 20px;
+    text-align: center;
+}
+
+.scrapbook-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 10%;
+}
+
+/* Efecto Polaroid */
+.polaroid {
+    background: white;
+    padding: 15px 15px 40px 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    width: 280px; /* Tamaño aceptable */
+    transition: transform 0.3s ease;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    filter: sepia(0.3);
+}
+
+/* Nota adhesiva */
+.sticky-note {
+    background: #fef68a;
+    padding: 25px;
+    width: 250px;
+    min-height: 150px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    font-family: 'Comic Sans MS', cursive;
+    transform: rotate(-2deg);
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* Animación de aparición (Reveal) */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) rotate(var(--rotation, 0deg));
+}
+
+/* Rotaciones específicas que se activan con la clase active */
+.rotate-left.active { --rotation: -5deg; }
+.rotate-right.active { --rotation: 5deg; }
+
+.polaroid:hover {
+    transform: scale(1.1) rotate(0deg) !important;
+    z-index: 10;
+}
